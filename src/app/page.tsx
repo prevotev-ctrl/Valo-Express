@@ -217,20 +217,59 @@ export default function Home() {
           </div>
 
           <div className="grid gap-4 md:gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <div className="lg:col-span-2 bg-white border border-forest-100 rounded-2xl p-5 shadow-md">
+            <div className="lg:col-span-2 bg-white border border-forest-100 rounded-2xl p-5 shadow-md overflow-auto">
               <div className="flex items-center gap-2 text-sm font-semibold text-forest-700 mb-3">
                 <Icon />
                 <span>Aperçu du dashboard</span>
                 <span className="text-[10px] px-2 py-0.5 rounded-full bg-forest-50 text-forest-700 border border-forest-100">Dashboard</span>
               </div>
-              <div className="text-[11px] text-gray-500 mb-2">Exemple : dashboard financier consolidé</div>
-              <div className="h-40 rounded-xl bg-forest-50 border border-forest-100 shadow-inner flex items-center justify-center text-forest-600 text-sm relative">
-                <div className="absolute top-3 left-3 flex gap-1">
-                  <span className="h-2 w-2 rounded-full bg-forest-300" />
-                  <span className="h-2 w-2 rounded-full bg-forest-200" />
-                  <span className="h-2 w-2 rounded-full bg-forest-100" />
+              <div className="text-[11px] text-gray-500 mb-3">Exemple : dashboard financier consolidé</div>
+              <div className="grid grid-cols-3 gap-3 text-xs mb-4">
+                <div className="bg-forest-50 rounded-lg p-2 border border-forest-100">
+                  <div className="font-medium text-forest-700">CA (en M€)</div>
+                  <div className="text-base font-semibold text-forest-900 mt-1">486.0</div>
+                  <div className="text-green-600 text-[10px] mt-1">↑ 8.0%</div>
                 </div>
-                Screenshot dashboard (placeholder)
+                <div className="bg-forest-50 rounded-lg p-2 border border-forest-100">
+                  <div className="font-medium text-forest-700">EBIT (en M€)</div>
+                  <div className="text-base font-semibold text-forest-900 mt-1">91.4</div>
+                  <div className="text-green-600 text-[10px] mt-1">↑ 12.8%</div>
+                </div>
+                <div className="bg-forest-50 rounded-lg p-2 border border-forest-100">
+                  <div className="font-medium text-forest-700">FCF (en M€)</div>
+                  <div className="text-base font-semibold text-forest-900 mt-1">48.9</div>
+                  <div className="text-green-600 text-[10px] mt-1">↑ 20.2%</div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="bg-gradient-to-br from-forest-50 to-forest-100/50 rounded-lg p-3 border border-forest-100">
+                  <div className="font-medium text-forest-700 mb-2 text-xs">Marge & ROIC</div>
+                  <div className="space-y-1 text-xs">
+                    <div className="flex justify-between">
+                      <span>EBIT margin</span><span className="font-semibold">18.8%</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>EBITDA margin</span><span className="font-semibold">21.7%</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>ROIC</span><span className="font-semibold">17.6%</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-gradient-to-br from-forest-50 to-forest-100/50 rounded-lg p-3 border border-forest-100">
+                  <div className="font-medium text-forest-700 mb-2 text-xs">Cash & dette</div>
+                  <div className="space-y-1 text-xs">
+                    <div className="flex justify-between">
+                      <span>Net debt</span><span className="font-semibold">124.0</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>CFO</span><span className="font-semibold">62.9</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>ND/EBITDA</span><span className="font-semibold">1.2x</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="bg-white rounded-2xl shadow-md border border-forest-100 p-5 flex items-start gap-3 min-h-[180px]">
